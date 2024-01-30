@@ -1,0 +1,73 @@
+@import 'reset/reset.css';
+@import 'fonts.scss';
+@import 'variables.scss';
+
+
+@import './blocks/header';
+@import './blocks/main';
+
+*{
+    // outline: 1px solid rgba(255, 0, 0, 0.657);
+}
+
+html {
+    height: 100%;
+}
+
+html,
+body{
+    min-height: 100%;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    
+    background: #36603E;  /* fallback for old browsers */
+    background: $mainWebkitBg;
+    background: $mainBg;
+    z-index: $z-index-1;
+
+    border-radius: 12px;
+    position: relative;
+    color: $white;
+    
+    @for $i from 3 through 6 {
+        &[data-aos-duration='#{$i}000'] [data-aos],
+        [data-aos][data-aos][data-aos-duration='#{$i}000'] {
+          transition-duration: #{$i}000ms;
+        }
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.599);
+    z-index: $z-index130; 
+}
+
+.container{
+    max-width: 1440px;
+    padding:  0 48px;
+    margin: 0 auto;
+    min-width: 375px;
+    position: relative;
+    @media (max-width: $breakpoint_xxl){
+            padding: 0 20px;
+    }
+}
+
+#active--link{
+    font-size: 12.091px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 128.023%; 
+
+    color: $white;
+}
+
+

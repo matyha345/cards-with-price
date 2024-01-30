@@ -1,0 +1,155 @@
+@import '../variables';
+.header{
+    padding-top: 34.55px;
+    .header__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+
+        @media (max-width: $breakpoint_xx){
+            position: fixed;
+            z-index: $z-index130;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            padding: 50px 15px;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $ebonyclay;
+            transform: translateX(100%);
+            transition: all 0.5s;
+        }
+
+        @media (max-width: $breakpoint_sm){
+            width: 100%; 
+        }
+        
+
+        .header__content-links{
+            display: flex;
+
+            @media (max-width: $breakpoint_xx){
+                height: 100%;
+                flex-direction: column;
+            }
+            .header__logo{
+                display: flex;
+                align-items: center;
+                transition: all .3s;
+              
+
+                .header__logo-text{
+                    margin-left: 0.23rem;
+                    width: 100%;
+                    font-size: 11.446px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 128.023%; 
+
+                    text-decoration: line-through;
+                }
+                
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+    
+            .header__links-item {
+                display: flex;
+                margin-left: 87.2px;
+
+                @media (max-width: $breakpoint_xx){
+                    height: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0;
+                }
+            
+                .header__links-list {
+                    margin-left: 3.02rem;
+                    
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    @media (max-width: $breakpoint_xx){
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                    .header__links-link {
+                        font-size: 12.091px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 128.023%;
+                        transition: all .3s;
+                        color: $whiteOpacity;
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .header__buttons{
+            display: flex;
+            .header__buttons-login{
+                background: transparent;
+                padding: 0.53975rem 0.86363rem;
+                font-size: 12.091px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 128.023%;
+                color: $whiteOpacity;
+
+                transition: all .3s;
+                &:hover{
+                    color: $white;
+                }
+            }
+
+            .header__buttons-signUp{
+                padding: 8.636px 13.818px;
+                background-color: $chestnut;
+                border-radius: 7px;
+                margin-left: 0.86rem;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 128.023%; 
+                color: $white;
+
+
+                transition: all .3s;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        
+    }
+    .header__content-open {
+        transform: translateX(0%);
+    }
+
+        .burger__menu{
+            background: transparent;
+            display: none;
+
+            @media (max-width: $breakpoint_xx){
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: $z-index150;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+}
