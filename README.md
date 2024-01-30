@@ -18,8 +18,3 @@ npm run dev
 ```shell
 npm run build
 ```
-
-### Очистка папки dist
-```shell
-npm run clear
-```
